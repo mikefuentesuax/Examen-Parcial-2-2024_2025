@@ -1,4 +1,4 @@
-#Examen-Parcial-2-2024_2025
+# Examen-Parcial-2-2024_2025
 https://github.com/mikefuentesuax/Examen-Parcial-2-2024_2025.git
 
 # Parte I – Misiones de Conocimiento Teórico
