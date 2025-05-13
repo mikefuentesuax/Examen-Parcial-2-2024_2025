@@ -107,3 +107,35 @@ UDP es un protocolo sin conexión,  no crea ni mantiene ninguna conexión entre 
 UDP es adecuado para aplicaciones que requieren baja latencia y alto rendimiento, como streaming, juegos, voz sobre IP y videoconferencias. UDP no agrega ningún encabezado o proceso adicional a los datos, y permite que el remitente controle la velocidad y el tamaño de los paquetes. UDP también admite multidifusión y difusión, lo que permite al remitente transmitir datos a varios receptores a la vez.
 
 
+## Misión 5: Comunicación Segura o Lado Oscuro – Criptografía y Seguridad de la Red
+
+La victoria rebelde depende de que sus comunicaciones permanezcan secretas.
+
+**Cifrado Simétrico vs. Cifrado Asimétrico:**
+
+La clave para la seguridad reside en el uso de claves secretas para cifrar nuestros mensajes, de manera que solo aquellos con la clave correcta puedan descifrarlos. Existen dos métodos principales para esto:
+
+* **Cifrado Simétrico:** Se utiliza la misma clave secreta tanto para cifrar como para descifrar el mensaje.
+
+    * **Funcionamiento:** Una clave compartida se usa para codificar y decodificar la información.
+    * **Ventajas:** Generalmente más rápido y requiere menos poder computacional.
+    * **Ejemplo en la Narrativa:** Cuando Leia y Luke comparten una frase clave secreta para cifrar sus holomensajes, ese es un ejemplo de **cifrado simétrico**.
+
+* **Cifrado Asimétrico (o de Clave Pública/Privada):** Cada participante tiene dos claves: una **clave pública** (que puede compartir) y una **clave privada** (que debe mantener en secreto).
+
+    * **Funcionamiento:** Un mensaje cifrado con la clave pública solo puede descifrarse con la clave privada correspondiente.
+    * **Ventajas:** Permite la comunicación segura sin intercambio previo de claves y facilita la autenticación.
+    * **Ejemplo en la Narrativa:** Si la Alianza quiere enviar un mensaje a un nuevo aliado sin haber intercambiado una clave secreta previamente, puede usar la **clave pública** del aliado para cifrar el mensaje, el cual solo podrá ser leído con la **clave privada** del aliado.
+
+**Importancia de la Autenticación y el No Repudio:**
+
+* **Autenticación:** Asegura que el mensaje realmente proviene de quien dice ser (mediante **firmas digitales** creadas con la clave privada del emisor y verificadas con su clave pública).
+* **No Repudio:** Evita que el emisor niegue haber enviado el mensaje (también logrado con **firmas digitales**).
+
+**La Crucial Importancia de Protocolos Seguros (SSH vs. Telnet):**
+
+* **Telnet:** Envía toda la información en texto plano, incluyendo credenciales, lo que lo hace inseguro para la administración remota.
+* **SSH (Secure Shell):** Cifra toda la comunicación entre el administrador y el equipo remoto, protegiendo las credenciales y los datos transmitidos. Utilizar SSH es crucial al administrar remotamente los equipos de la red rebelde.
+
+Implementando estas medidas, podemos construir una red de comunicaciones rebelde que sea resistente a la escucha y manipulación por parte del lado oscuro.
+
