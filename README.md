@@ -60,3 +60,50 @@ La diferencia es la información que comparten y cómo toman decisiones de enrut
 En un entorno de enrutamiento estático, si un nodo o enlace cae, las rutas se interrumpen y es necesario reconfigurar manualmente las rutas afectadas.
 
 En una red con enrutamiento dinámico, los protocolos detectan automáticamente el fallo y recalculan nuevas rutas, asegurando la continuidad del servicio.
+
+## Misión 3: Los Nombres del Holonet – DNS y Resolución de Nombres
+
+El DNS actúa como un directorio, traduciendo los nombres a las direcciones que los ordenadores necesitan.
+
+1.  **La Petición:** Cuando un técnico rebelde intenta acceder a "holonet.rebelion.org", su computadora no sabe dónde está ese sitio. Envía una petición a un servidor DNS, preguntando: "¿Cuál es la dirección IP de holonet.rebelion.org?".
+2.  **El Servidor DNS:** Este servidor es como un bibliotecario galáctico, especializado en buscar direcciones. Si el servidor DNS conoce la respuesta (porque la tiene en su "catálogo" o la ha preguntado recientemente), la envía de vuelta a la computadora del técnico.
+3.  **Los Registros DNS:** El "catálogo" del servidor DNS está lleno de registros. Un registro **A** es el más común, y asocia un nombre de dominio (como "holonet.rebelion.org") con una dirección IP (por ejemplo, 192.168.1.10). Hay otros tipos de registros (como MX para correo electrónico, CNAME para alias, etc.), pero el registro A es crucial para la navegación web.
+4.  **La Respuesta:** El servidor DNS envía la dirección IP (192.168.1.10) a la computadora del técnico.
+5.  **La Conexión:** Ahora la computadora sabe a dónde ir y puede conectarse al servidor web de "holonet.rebelion.org".
+
+
+* El técnico escribe "holonet.rebelion.org" en su navegador.
+* La computadora pregunta a un servidor DNS: "¿Cuál es la IP de holonet.rebelion.org?".
+* El servidor DNS responde: "192.168.1.10".
+* La computadora se conecta a 192.168.1.10.
+
+**La Importancia del DNS:**
+
+* **Facilidad de Uso:** Permite a los usuarios recordar nombres en lugar de números complejos.
+* **Flexibilidad:** Si la dirección IP de un servidor cambia, solo necesitamos actualizar el registro DNS. Los usuarios seguirán usando el mismo nombre.
+* **Organización:** El DNS está organizado jerárquicamente, como un árbol, lo que permite gestionar millones de nombres de dominio de forma eficiente.
+
+Si el servidor DNS rebelde no está disponible, es como si el directorio telefónico galáctico desapareciera.
+
+* **Pérdida de Comunicación:** Lois ordenadores no podrán traducir los nombres de dominio a direcciones IP.
+* **Sitios Web Inaccesibles:** Los técnicos no podrán acceder a sitios web usando sus nombres.
+* **Interrupción de Servicios:** Muchos servicios dependen del DNS.
+
+## Misión 4: “Es una trampa… de protocolos!” – TCP vs UDP en las transmisiones
+
+**Características de TCP**
+Es un protocolo orientado a la conexión, por lo cual establece un enlace entre el emisor y receptor. También garantiza que los datos lleguen en orden correcto y sin errores. Es más confiable pero consume más recurso.
+
+
+**Consideraciones del UDP**
+Adecuado para aplicaciones que requieren alta confiabilidad y precisión, como navegación web, correo electrónico, transferencia de archivos y acceso remoto. TCP garantiza que los datos se entreguen completa y correctamente, y maneja la congestión y el control de flujo para evitar la sobrecarga de la red. TCP también proporciona funciones de seguridad, como cifrado y autenticación, para proteger los datos del acceso o la modificación no autorizados.
+
+
+**Características del UDP**
+UDP es un protocolo sin conexión,  no crea ni mantiene ninguna conexión entre el emisor y el receptor. UDP simplemente envía los datos como paquetes, o datagramas, sin verificar ni garantizar su entrega, orden o integridad. UDP es rápido y eficiente, pero también tiene un mayor riesgo de perder, duplicar o corromper datos.
+
+
+**Consideraciones del TCP**
+UDP es adecuado para aplicaciones que requieren baja latencia y alto rendimiento, como streaming, juegos, voz sobre IP y videoconferencias. UDP no agrega ningún encabezado o proceso adicional a los datos, y permite que el remitente controle la velocidad y el tamaño de los paquetes. UDP también admite multidifusión y difusión, lo que permite al remitente transmitir datos a varios receptores a la vez.
+
+
