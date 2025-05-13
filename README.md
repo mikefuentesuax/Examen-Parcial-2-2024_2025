@@ -56,3 +56,7 @@ La diferencia es la información que comparten y cómo toman decisiones de enrut
 * **Vector de Distancia**: Cada router informa a sus vecinos de la distancia a cada destino. Tiene una visión limitada de la red y una convergencia más lenta.
 
 * **Estado de Enlace**: Cada router comparte información sobre sus enlaces directos, y todos los routers construyen un mapa completo de la red. Esto permite una convergencia rápida y rutas más eficientes, aunque a costa de un mayor uso de memoria y CPU.
+
+En un entorno de enrutamiento estático, si un nodo o enlace cae, las rutas se interrumpen y es necesario reconfigurar manualmente las rutas afectadas.
+
+En una red con enrutamiento dinámico, los protocolos detectan automáticamente el fallo y recalculan nuevas rutas, asegurando la continuidad del servicio.
